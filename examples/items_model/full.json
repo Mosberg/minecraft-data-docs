@@ -1,9 +1,0 @@
-{
-  "hand_animation_on_swap": true,
-  "model": {
-    "model": "example_model",
-    "type": "minecraft:model"
-  },
-  "oversized_in_gui": true,
-  "swap_animation_scale": 42.0
-}
