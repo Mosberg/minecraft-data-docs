@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/range_dispatch_property_types.schema.json",
+  "title": "Range Dispatch Property Types",
+  "description": "Placeholder schema for range_dispatch_property_types.md. No data structure is enforced.",
+  "type": "object",
+  "additionalProperties": true
+}

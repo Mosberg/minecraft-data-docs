@@ -22,8 +22,6 @@ def main():
     for doc in all_docs:
         base = doc.stem  # e.g. block-models, armor-stand-nbt
         snake = kebab_to_snake(base)
-        # Heuristic: strip trailing "-nbt" for NBT docs to match schema naming
-        snake = snake.replace("_nbt", "") if "nbt" in doc.parts else snake
         expected_schemas.add(snake)
 
     schema_files = sorted(schemas_root.rglob("*.schema.json"))
@@ -60,7 +58,6 @@ def main():
 
         base = doc.stem
         snake = kebab_to_snake(base)
-        snake = snake.replace("_nbt", "") if "nbt" in doc.parts else snake
 
         # Find matching schema
         candidates = [p for p in schema_files if p.stem.startswith(snake)]

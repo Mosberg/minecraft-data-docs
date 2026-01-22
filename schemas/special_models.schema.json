@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/special_models.schema.json",
+  "title": "Special Models",
+  "description": "Placeholder schema for special_models.md. No data structure is enforced.",
+  "type": "object",
+  "additionalProperties": true
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/select_property_types.schema.json",
+  "title": "Select Property Types",
+  "description": "Placeholder schema for select_property_types.md. No data structure is enforced.",
+  "type": "object",
+  "additionalProperties": true
+}

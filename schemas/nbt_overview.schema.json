@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/nbt_overview.schema.json",
+  "title": "NBT Overview",
+  "description": "Placeholder schema for nbt_overview.md. No data structure is enforced.",
+  "type": "object",
+  "additionalProperties": true
+}

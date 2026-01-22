@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/data_generator.schema.json",
+  "title": "Data Generator",
+  "description": "Placeholder schema for data_generator.md. No data structure is enforced.",
+  "type": "object",
+  "additionalProperties": true
+}
