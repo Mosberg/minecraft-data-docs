@@ -71,7 +71,7 @@ def generate_minimal_example(schema: dict):
                 # Try local path first
                 local_path = None
                 if ref.startswith(
-                    "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/"
+                    "https://github.com/Mosberg/minecraft-data-docs/tree/main/"
                 ):
                     rel_path = ref.split("projects/minecraft-data-docs/")[-1]
                     local_path = Path(os.path.join("minecraft-data-docs", rel_path))
@@ -91,7 +91,7 @@ def generate_minimal_example(schema: dict):
                         # Try local path first
                         other_local_path = None
                         if other_ref_url.startswith(
-                            "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/"
+                            "https://github.com/Mosberg/minecraft-data-docs/tree/main/"
                         ):
                             rel_path = other_ref_url.split(
                                 "projects/minecraft-data-docs/"
@@ -161,7 +161,7 @@ def generate_typical_example(schema: dict):
 
                 local_path = None
                 if ref.startswith(
-                    "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/"
+                    "https://github.com/Mosberg/minecraft-data-docs/tree/main/"
                 ):
                     rel_path = ref.split("projects/minecraft-data-docs/")[-1]
                     local_path = Path(os.path.join("minecraft-data-docs", rel_path))
@@ -179,7 +179,7 @@ def generate_typical_example(schema: dict):
                     if other_ref_url:
                         other_local_path = None
                         if other_ref_url.startswith(
-                            "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/"
+                            "https://github.com/Mosberg/minecraft-data-docs/tree/main/"
                         ):
                             rel_path = other_ref_url.split(
                                 "projects/minecraft-data-docs/"
@@ -247,7 +247,7 @@ def generate_maximal_example(schema: dict):
 
                 local_path = None
                 if ref.startswith(
-                    "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/"
+                    "https://github.com/Mosberg/minecraft-data-docs/tree/main/"
                 ):
                     rel_path = ref.split("projects/minecraft-data-docs/")[-1]
                     local_path = Path(os.path.join("minecraft-data-docs", rel_path))
@@ -265,7 +265,7 @@ def generate_maximal_example(schema: dict):
                     if other_ref_url:
                         other_local_path = None
                         if other_ref_url.startswith(
-                            "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/"
+                            "https://github.com/Mosberg/minecraft-data-docs/tree/main/"
                         ):
                             rel_path = other_ref_url.split(
                                 "projects/minecraft-data-docs/"

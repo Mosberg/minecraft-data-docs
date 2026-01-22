@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/block_model.schema.json",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/block_model.schema.json",
   "title": "Minecraft Block Model",
   "type": "object",
 

@@ -1,39 +1,39 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/minecraft_nbt_full.schema.json",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/minecraft_nbt_full.schema.json",
   "title": "Minecraft NBT Master Schema",
   "type": "object",
 
   "oneOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/entity_nbt.schema.json"
+      "$ref": "https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/entity_nbt.schema.json"
     },
     {
-      "$ref": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/block_nbt.schema.json"
+      "$ref": "https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/block_nbt.schema.json"
     },
     {
-      "$ref": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/item_nbt.schema.json"
+      "$ref": "https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/item_nbt.schema.json"
     },
     {
-      "$ref": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/potion_nbt.schema.json"
+      "$ref": "https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/potion_nbt.schema.json"
     },
     {
-      "$ref": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/armor_stand_nbt.schema.json"
+      "$ref": "https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/armor_stand_nbt.schema.json"
     },
     {
-      "$ref": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/turtle_nbt.schema.json"
+      "$ref": "https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/turtle_nbt.schema.json"
     },
     {
-      "$ref": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/spawner_nbt.schema.json"
+      "$ref": "https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/spawner_nbt.schema.json"
     },
     {
-      "$ref": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/item_frame_nbt.schema.json"
+      "$ref": "https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/item_frame_nbt.schema.json"
     },
     {
-      "$ref": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/falling_block_nbt.schema.json"
+      "$ref": "https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/falling_block_nbt.schema.json"
     },
     {
-      "$ref": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/villager_nbt.schema.json"
+      "$ref": "https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/villager_nbt.schema.json"
     }
   ]
 }

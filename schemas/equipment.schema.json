@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/equipment.schema.json",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/equipment.schema.json",
   "title": "Minecraft Equipment Definition",
   "type": "object",
 
