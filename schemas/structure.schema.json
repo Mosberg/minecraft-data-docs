@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/schemas/structure.schema.json",
+  "title": "Minecraft Structure File",
+  "description": "Schema for Minecraft structure JSON files. See https://minecraft.wiki/w/Structure_definition for authoritative documentation.",
+  "externalDocs": {
+    "description": "Minecraft Wiki: Structure",
+    "url": "https://minecraft.wiki/w/Structure_definition"
+  },
+  "type": "object",
+  "properties": {
+    "biomes": { "type": "array" },
+    "step": { "type": "string" },
+    "settings": { "type": "object" }
+  },
+  "additionalProperties": true
+}

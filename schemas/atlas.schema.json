@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/schemas/atlas.schema.json",
+  "title": "Minecraft Texture Atlas",
+  "description": "Schema for Minecraft texture atlas JSON files. See https://minecraft.wiki/w/Atlas for authoritative documentation.",
+  "externalDocs": {
+    "description": "Minecraft Wiki: Atlas",
+    "url": "https://minecraft.wiki/w/Atlas"
+  },
+  "type": "object",
+  "properties": {
+    "sources": { "type": "array" }
+  },
+  "additionalProperties": true
+}

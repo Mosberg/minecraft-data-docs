@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/schemas/placed_feature.schema.json",
+  "title": "Minecraft Placed Feature File",
+  "description": "Schema for Minecraft placed feature JSON files. See https://minecraft.wiki/w/Placed_feature for authoritative documentation.",
+  "externalDocs": {
+    "description": "Minecraft Wiki: Placed Feature",
+    "url": "https://minecraft.wiki/w/Placed_feature"
+  },
+  "type": "object",
+  "properties": {
+    "feature": { "type": "string" },
+    "placement": { "type": "array" }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/schemas/loot_table.schema.json",
+  "title": "Minecraft Loot Table",
+  "description": "Schema for Minecraft loot table JSON files. See https://minecraft.wiki/w/Loot_table for authoritative documentation.",
+  "externalDocs": {
+    "description": "Minecraft Wiki: Loot Table",
+    "url": "https://minecraft.wiki/w/Loot_table"
+  },
+  "type": "object",
+  "properties": {
+    "type": { "type": "string" },
+    "pools": { "type": "array" },
+    "functions": { "type": "array" }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/schemas/pack_mcmeta.schema.json",
+  "title": "Minecraft pack.mcmeta File",
+  "description": "Schema for Minecraft pack.mcmeta JSON files. See https://minecraft.wiki/w/Pack.mcmeta for authoritative documentation.",
+  "externalDocs": {
+    "description": "Minecraft Wiki: pack.mcmeta",
+    "url": "https://minecraft.wiki/w/Pack.mcmeta"
+  },
+  "type": "object",
+  "properties": {
+    "pack": { "type": "object" }
+  },
+  "additionalProperties": true
+}

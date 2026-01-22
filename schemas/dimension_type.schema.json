@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/schemas/dimension_type.schema.json",
+  "title": "Minecraft Dimension Type File",
+  "description": "Schema for Minecraft dimension type JSON files. See https://minecraft.wiki/w/Dimension_type for authoritative documentation.",
+  "externalDocs": {
+    "description": "Minecraft Wiki: Dimension Type",
+    "url": "https://minecraft.wiki/w/Dimension_type"
+  },
+  "type": "object",
+  "properties": {
+    "ultrawarm": { "type": "boolean" },
+    "natural": { "type": "boolean" },
+    "coordinate_scale": { "type": "number" }
+  },
+  "additionalProperties": true
+}

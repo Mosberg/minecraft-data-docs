@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/schemas/dimension.schema.json",
+  "title": "Minecraft Dimension File",
+  "description": "Schema for Minecraft dimension JSON files. See https://minecraft.wiki/w/Dimension for authoritative documentation.",
+  "externalDocs": {
+    "description": "Minecraft Wiki: Dimension",
+    "url": "https://minecraft.wiki/w/Dimension"
+  },
+  "type": "object",
+  "properties": {
+    "type": { "type": "string" },
+    "generator": { "type": "object" }
+  },
+  "additionalProperties": true
+}

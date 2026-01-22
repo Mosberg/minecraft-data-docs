@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/schemas/credits.schema.json",
+  "title": "Minecraft Credits File",
+  "description": "Schema for Minecraft credits.json files. See https://minecraft.wiki/w/Credits.json for authoritative documentation.",
+  "externalDocs": {
+    "description": "Minecraft Wiki: Credits.json",
+    "url": "https://minecraft.wiki/w/Credits.json"
+  },
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "section": { "type": "string" },
+      "disciplines": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "discipline": { "type": "string" },
+            "titles": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "names": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  }
+                },
+                "required": ["title", "names"]
+              }
+            }
+          },
+          "required": ["discipline", "titles"]
+        }
+      }
+    },
+    "required": ["section", "disciplines"]
+  }
+}

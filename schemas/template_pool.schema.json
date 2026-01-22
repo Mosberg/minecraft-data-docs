@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/schemas/template_pool.schema.json",
+  "title": "Minecraft Template Pool File",
+  "description": "Schema for Minecraft template pool JSON files. See https://minecraft.wiki/w/Template_pool for authoritative documentation.",
+  "externalDocs": {
+    "description": "Minecraft Wiki: Template Pool",
+    "url": "https://minecraft.wiki/w/Template_pool"
+  },
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "fallback": { "type": "string" },
+    "elements": { "type": "array" }
+  },
+  "additionalProperties": true
+}

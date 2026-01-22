@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/schemas/advancement.schema.json",
+  "title": "Minecraft Advancement",
+  "description": "Schema for Minecraft advancement JSON files. See https://minecraft.wiki/w/Advancement for authoritative documentation.",
+  "externalDocs": {
+    "description": "Minecraft Wiki: Advancement",
+    "url": "https://minecraft.wiki/w/Advancement"
+  },
+  "type": "object",
+  "properties": {
+    "criteria": { "type": "object" },
+    "rewards": { "type": "object" },
+    "requirements": { "type": "array" },
+    "parent": { "type": "string" },
+    "display": { "type": "object" }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/schemas/tag.schema.json",
+  "title": "Minecraft Tag",
+  "description": "Schema for Minecraft tag JSON files. See https://minecraft.wiki/w/Tag for authoritative documentation.",
+  "externalDocs": {
+    "description": "Minecraft Wiki: Tag",
+    "url": "https://minecraft.wiki/w/Tag"
+  },
+  "type": "object",
+  "properties": {
+    "replace": { "type": "boolean" },
+    "values": { "type": "array" }
+  },
+  "additionalProperties": true
+}

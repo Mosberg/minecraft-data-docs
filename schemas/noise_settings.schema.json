@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/schemas/noise_settings.schema.json",
+  "title": "Minecraft Noise Settings File",
+  "description": "Schema for Minecraft noise settings JSON files. See https://minecraft.wiki/w/Noise_settings for authoritative documentation.",
+  "externalDocs": {
+    "description": "Minecraft Wiki: Noise Settings",
+    "url": "https://minecraft.wiki/w/Noise_settings"
+  },
+  "type": "object",
+  "properties": {
+    "noise": { "type": "object" },
+    "default_block": { "type": "string" },
+    "default_fluid": { "type": "string" }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mosberg/minecraft-data-docs/schemas/biome.schema.json",
+  "title": "Minecraft Biome File",
+  "description": "Schema for Minecraft biome JSON files. See https://minecraft.wiki/w/Biome for authoritative documentation.",
+  "externalDocs": {
+    "description": "Minecraft Wiki: Biome",
+    "url": "https://minecraft.wiki/w/Biome"
+  },
+  "type": "object",
+  "properties": {
+    "effects": { "type": "object" },
+    "temperature": { "type": "number" },
+    "downfall": { "type": "number" }
+  },
+  "additionalProperties": true
+}
