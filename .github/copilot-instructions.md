@@ -1,55 +1,75 @@
-# Copilot Instructions for minecraft-data-docs
+# Copilot Instructions — minecraft-data-docs
 
-## Project Overview
+These instructions define the quality bar and contribution rules for this repository.
+Follow them by default; only deviate when explicitly asked.
 
-This repository documents Minecraft data formats and provides JSON schemas for block models, item models, block states, and NBT data. It is a reference for developers and modders working with Minecraft data.
+## What this repo is
 
-## Structure & Key Directories
+This repository documents Minecraft data formats and provides JSON Schemas for validating those formats (block models, item models, block states, NBT, etc.).
 
-- **docs/**: Markdown documentation for each data format. Subfolder `docs/nbt/` covers NBT data types.
-- **schemas/**: JSON Schema files for validating Minecraft data. Subfolder `schemas/nbt/` contains NBT-related schemas.
-- **README.md**: Entry point for navigation and project context.
+Primary goal: accurate, maintainable reference documentation + validation schemas that stay in sync.
 
-## Authoring & Contribution Patterns
+## Where things live
 
-- Documentation and schemas are organized by data type (block, item, NBT, etc.).
-- Each schema in `schemas/` is paired with a corresponding documentation file in `docs/`.
-- When adding a new data type, create both a markdown doc and a schema file, and update the README with links.
-- Use clear, descriptive file names matching the data type (e.g., `block_model.schema.json`, `block-models.md`).
+- `docs/`: Human-readable Markdown documentation.
+- `schemas/`: JSON Schema files (including `schemas/nbt/`).
+- `README.md`: Navigation hub and entrypoint.
+- `remote-indexes.md`: Curated link index for internal files and external references.
 
-## References
+## High-level rules (always)
 
-- See `remote-indexes.md` [Remote Indexes](remote-indexes.md) for quick access to important project resources.
+- Prefer correctness over creativity; do not invent fields, tags, or semantics.
+- Keep documentation and schemas paired: if one changes, update the other.
+- Maintain cross-links (README ↔ docs ↔ schemas) so readers can navigate quickly.
+- Be consistent with existing style and file layout; avoid “new patterns” unless clearly better and applied consistently.
 
-- See `README.md` [README](../README.md) for a full directory and file listing.
+## Naming & file conventions
 
-- See `docs/` [docs](../docs/) and `schemas/` [schemas](../schemas/) for examples of documentation and schema structure.
+- Markdown docs: kebab-case (example: `block-models.md`, `armor-stand-nbt.md`).
+- Schemas: snake_case + `.schema.json` (example: `block_model.schema.json`, `armor_stand_nbt.schema.json`).
+- Keep names aligned between doc and schema (same concept, predictable mapping).
 
-## Conventions
+## Documentation authoring standards (`docs/`)
 
-- **Naming**: Use kebab-case for markdown files, snake_case for schema files.
-- **Schema Design**: Follow existing schema structure for consistency. Reference other schemas using `$ref` where possible.
-- **Documentation**: Use markdown tables and code blocks to illustrate data structures and examples.
-- **Links**: Keep README and docs cross-linked for easy navigation.
+- Write for technical readers: concise definitions, then structured details.
+- Use headings to mirror the data structure (top-level → nested).
+- Use Markdown tables for field/property definitions where practical:
+  - Column suggestions: Name, Type, Required, Description.
+- Provide minimal, valid JSON examples:
+  - One “smallest valid” example.
+  - One “common real-world” example (only if it adds clarity).
+- Prefer stable internal links (relative paths). Avoid linking to moving targets when possible.
 
-## Workflows
+## JSON Schema standards (`schemas/`)
 
-- No build or test scripts; this is a documentation and schema repository.
-- Validate JSON schemas using your preferred JSON Schema validator.
-- Preview documentation using a markdown viewer or GitHub Pages.
+- Follow existing schema patterns in this repo for consistency.
+- Use `$ref` to reuse definitions rather than duplicating structures.
+- Keep schemas readable:
+  - Group related definitions under `$defs` (or the repo’s existing pattern).
+  - Use `title`/`description` meaningfully for editor/tooling UX.
+- Be explicit about constraints when known:
+  - Use `enum` for closed sets.
+  - Use `minimum`/`maximum`, `pattern`, `minItems`, etc., where appropriate.
+- Avoid over-constraining when the game format is permissive/unknown:
+  - Prefer “allow but document” when unsure.
+  - If uncertain, add a short note in the doc describing the ambiguity.
 
-## Examples
+## Change workflow (what to update when)
 
-- To add a new NBT type:
-  1. Add `docs/nbt/new-type-nbt.md`.
-  2. Add `schemas/nbt/new_type_nbt.schema.json`.
-  3. Update `README.md` with links to both files.
+When adding a new format/type:
 
-## Integration
+1. Add the Markdown doc in the appropriate folder under `docs/` (use kebab-case).
+2. Add the matching schema in `schemas/` (use snake_case + `.schema.json`).
+3. Link both from `README.md` (and from any relevant overview docs).
+4. Update `remote-indexes.md` with quick links to the new doc + schema.
 
-- No external dependencies or code execution. All content is static.
-- GitHub Pages is used for documentation hosting.
+When editing an existing format/type:
 
----
+- Update the doc and schema together unless the change is strictly editorial (spelling/formatting).
+- If you rename/move files, fix all inbound links (README and other docs).
 
-For questions about conventions or structure, review the README or existing files for patterns to follow.
+## Safety / review mindset
+
+- Do not make sweeping “cleanup” changes across many files unless requested.
+- Prefer small, reviewable commits: one concept per change set.
+- If requirements are unclear, ask a clarifying question before restructuring schemas or rewriting large documentation sections.
