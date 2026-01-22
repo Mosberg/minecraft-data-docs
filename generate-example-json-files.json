@@ -2,9 +2,9 @@
   "version": "1.0.0",
   "description": "Specification for generating example JSON files from schemas and documentation.",
   "input": {
-    "schema_root": "minecraft-data-docs/schemas/",
-    "docs_root": "minecraft-data-docs/docs/",
-    "validation_settings": "minecraft-data-docs/.vscode/settings.json"
+    "schema_root": "schemas/",
+    "docs_root": "docs/",
+    "validation_settings": ".vscode/settings.json"
   },
   "rules": {
     "authority": {
@@ -37,8 +37,8 @@
     }
   },
   "output": {
-    "root": "minecraft-data-docs/examples/",
-    "structure": "minecraft-data-docs/examples/<schema-name>/<example-name>.json",
+    "root": "examples/",
+    "structure": "examples/<schema-name>/<example-name>.json",
     "overwrite_existing": true,
     "pretty_print": true,
     "newline_at_end_of_file": true

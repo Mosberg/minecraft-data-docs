@@ -74,3 +74,15 @@ The GitHub Action:
 ## Contributing
 
 See `CONTRIBUTING.md` (or the onboarding section below) for detailed guidelines.
+
+Runs: python tools/generateExampleJsonFiles.py
+
+Runs: python tools/validateExamples.py
+
+Runs: python tools/schemaCoverageReport.py
+
+Runs: python tools/schemaSemanticCoverageReport.py
+
+Runs: python tools/lintDocsSchemas.py
+
+Fails CI if anything drifts.
