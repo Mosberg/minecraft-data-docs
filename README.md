@@ -1,116 +1,76 @@
-# Minecraft Data Documentation
+# minecraft-data-docs
 
-This repository contains documentation and JSON schemas for various Minecraft data formats, including block models, item models, block states, NBT data, and more. It serves as a comprehensive resource for developers and modders working with Minecraft data.
+Structured, schema‑driven documentation of Minecraft data formats, with:
 
-# Remote Indexes for Minecraft Data Documentation
+- JSON Schemas for validation.
+- Markdown docs for humans.
+- Auto‑generated example JSON files.
+- CI‑enforced consistency between docs, schemas, and examples.
 
-- [Remote Indexes](https://github.com/Mosberg/minecraft-data-docs/tree/main/.github/remote-indexes.md)
+## Repository structure
 
-Quick access to important resources in this project:
+- `docs/` — Human‑readable documentation for each data domain:
+  - Block models, item models, block states, NBT, etc.
+- `schemas/` — JSON Schemas that define and validate each format.
+- `examples/` — Auto‑generated example JSON files per schema.
+- `tools/` — Python utilities:
+  - `generateExampleJsonFiles.py` — Generate examples from schemas.
+  - `validateExamples.py` — Validate examples against schemas.
+  - `lintDocsSchemas.py` — Check docs ↔ schema consistency.
+  - `schemaCoverageReport.py` — Report example coverage per schema.
+- `remote-indexes.md` — Curated internal + external reference links.
+- `generate-example-json-files.json` — Spec for the example generator.
+- `schemas/generator/` — JSON Schema for the generator spec itself.
 
-- [GitHub Pages Site](https://github.com/Mosberg/minecraft-data-docs/tree/main/)
-- [GitHub Repository](https://github.com/Mosberg/Mosberg.github.io/tree/main/projects/minecraft-data-docs/)
-- [Markdown Documentation Files](https://github.com/Mosberg/Mosberg.github.io/tree/main/projects/minecraft-data-docs/docs/)
-- [JSON Schemas Files](https://github.com/Mosberg/Mosberg.github.io/tree/main/projects/minecraft-data-docs/schemas/)
+## Design principles
 
-### Markdown Documentation
+- **Schemas are the source of truth.**
+  Docs explain; schemas define what is valid.
 
-Quick links to the documentation files:
+- **Docs and schemas stay in sync.**
+  Every format has both a doc and a schema, linked and named consistently.
 
-- [Block Models Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/block-models.md)
-- [Block States Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/block-states.md)
-- [Boolean Property Types Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/boolean-property-types.md)
-- [Data Generator Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/data-generator.md)
-- [Equipment Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/equipment.md)
-- [Item Models Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/item-models.md)
-- [Items Models Overview Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/items-models-overview.md)
-- [Range Dispatch Property Types Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/range-dispatch-property-types.md)
-- [Select Property Types Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/select-property-types.md)
-- [Special Models Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/special-models.md)
-- [NBT Overview Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/nbt/nbt-overview.md)
-- [Armor Stand NBT Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/nbt/armor-stand-nbt.md)
-- [Block NBT Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/nbt/block-nbt.md)
-- [Entity NBT Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/nbt/entity-nbt.md)
-- [Falling Block NBT Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/nbt/falling-block-nbt.md)
-- [Item Frame NBT Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/nbt/item-frame-nbt.md)
-- [Item NBT Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/nbt/item-nbt.md)
-- [Potion NBT Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/nbt/potion-nbt.md)
-- [Spawner NBT Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/nbt/spawner-nbt.md)
-- [Turtle NBT Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/nbt/turtle-nbt.md)
-- [Villager NBT Documentation](https://github.com/Mosberg/minecraft-data-docs/tree/main/docs/nbt/villager-nbt.md)
+- **Examples are generated, not hand‑written.**
+  Examples live under `examples/` and are produced by the generator spec.
 
-### JSON Schemas
+- **CI enforces correctness.**
+  The GitHub Action regenerates examples, validates them, lints docs/schemas, and checks coverage.
 
-Quick links to the JSON schema files:
+## Example generation pipeline
 
-- [Block Model Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/block_model.schema.json)
-- [Block States Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/block_states.schema.json)
-- [Equipment Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/equipment.schema.json)
-- [Item Model Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/item_model.schema.json)
-- [Items Model Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/items_model.schema.json)
-- [Armor Stand NBT Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/armor_stand_nbt.schema.json)
-- [Block NBT Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/block_nbt.schema.json)
-- [Entity NBT Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/entity_nbt.schema.json)
-- [Falling Block NBT Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/falling_block_nbt.schema.json)
-- [Item Frame NBT Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/item_frame_nbt.schema.json)
-- [Item NBT Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/item_nbt.schema.json)
-- [Minecraft NBT Full Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/minecraft_nbt_full.schema.json)
-- [Potion NBT Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/potion_nbt.schema.json)
-- [Spawner NBT Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/spawner_nbt.schema.json)
-- [Turtle NBT Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/turtle_nbt.schema.json)
-- [Villager NBT Schema](https://github.com/Mosberg/minecraft-data-docs/tree/main/schemas/nbt/villager_nbt.schema.json)
+1. `generateExampleJsonFiles.py`:
+   - Reads `generate-example-json-files.json`.
+   - Validates it against `schemas/generator/generate-example-json-files.schema.json`.
+   - Enumerates all `*.schema.json` under `schemas/`.
+   - Generates multiple example types per schema:
+     - `minimal`, `typical`, `full`, `maximal`, `thematic`, `performance`, `experimental`, `vanilla`, `modded`, `edge_cases`.
+   - Writes examples to:
+     - `examples/<schema-name>/<example-type>.json`
+     - `examples/<schema-name>/edge_cases/*.json`
 
-## Repository Structure
+2. `validateExamples.py`:
+   - Validates every example against its corresponding schema.
 
-The repository is organized as follows:
+3. `lintDocsSchemas.py`:
+   - Ensures docs and schemas are aligned by naming and basic coverage.
 
-```
-minecraft-data-docs/
-├─ .github/
-│  ├─ copilot-instructions.md
-│  └─ remote-indexes.md
-├─ .vscode/
-│  └─ settings.json
-├─ docs/
-│  ├─ block-models.md
-│  ├─ block-states.md
-│  ├─ boolean-property-types.md
-│  ├─ data-generator.md
-│  ├─ equipment.md
-│  ├─ item-models.md
-│  ├─ items-models-overview.md
-│  ├─ range-dispatch-property-types.md
-│  ├─ select-property-types.md
-│  ├─ special-models.md
-│  └─ nbt/
-│     ├─ armor-stand-nbt.md
-│     ├─ block-nbt.md
-│     ├─ entity-nbt.md
-│     ├─ falling-block-nbt.md
-│     ├─ item-frame-nbt.md
-│     ├─ item-nbt.md
-│     ├─ nbt-overview.md
-│     ├─ potion-nbt.md
-│     ├─ spawner-nbt.md
-│     ├─ turtle-nbt.md
-│     └─ villager-nbt.md
-├─ schemas/
-│  ├─ block_model.schema.json
-│  ├─ block_states.schema.json
-│  ├─ equipment.schema.json
-│  ├─ items_model.schema.json
-│  ├─ item_model.schema.json
-│  └─ nbt/
-│     ├─ armor_stand_nbt.schema.json
-│     ├─ block_nbt.schema.json
-│     ├─ entity_nbt.schema.json
-│     ├─ falling_block_nbt.schema.json
-│     ├─ item_frame_nbt.schema.json
-│     ├─ item_nbt.schema.json
-│     ├─ minecraft_nbt_full.schema.json
-│     ├─ potion_nbt.schema.json
-│     ├─ spawner_nbt.schema.json
-│     ├─ turtle_nbt.schema.json
-│     └─ villager_nbt.schema.json
-└─ README.md
-```
+4. `schemaCoverageReport.py`:
+   - Summarizes which example types exist per schema.
+
+## CI workflow
+
+The GitHub Action:
+
+- Runs on pushes, PRs, and manual triggers.
+- Regenerates examples.
+- Validates examples.
+- Lints docs and schemas.
+- Generates a coverage report.
+- Fails if:
+  - Examples are invalid.
+  - Expected examples are missing.
+  - Unexpected changes are introduced.
+
+## Contributing
+
+See `CONTRIBUTING.md` (or the onboarding section below) for detailed guidelines.

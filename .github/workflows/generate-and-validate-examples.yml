@@ -1,0 +1,60 @@
+name: Generate and Validate JSON Examples
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  generate-and-validate:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: projects/minecraft-data-docs
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install jsonschema
+
+      - name: Generate example JSON files
+        run: |
+          python tools/generateExampleJsonFiles.py
+
+      - name: Validate generated examples against schemas
+        run: |
+          python tools/validateExamples.py
+
+      - name: Lint docs and schemas for consistency
+        run: |
+          python tools/lintDocsSchemas.py
+
+      - name: Generate schema coverage report
+        run: |
+          python tools/schemaCoverageReport.py > schema-coverage-report.txt
+
+      - name: Show coverage report
+        run: |
+          cat schema-coverage-report.txt
+
+      - name: Fail if uncommitted changes exist
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "Generated or validated files differ from expected output."
+            git status --porcelain
+            exit 1
+          fi
+
+      - name: Success
+        run: echo "All examples generated, validated, linted, and coverage-checked successfully."

@@ -601,7 +601,7 @@ def generate_examples_for_schema(
 
 def main():
     root = Path(__file__).resolve().parent.parent
-    spec_path = root / "minecraft-data-docs/generate-example-json-files.json"
+    spec_path = root / "minecraft-data-docs/tools/generate-example-json-files.json"
     spec_schema_path = (
         root
         / "minecraft-data-docs/schemas/generator/generate-example-json-files.schema.json"
