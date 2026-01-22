@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/block_nbt.schema.json",
+  "title": "Block NBT",
+  "type": "object",
+
+  "properties": {
+    "CustomName": { "type": "string" },
+    "Lock": { "type": "string" },
+
+    "Command": { "type": "string" },
+    "auto": { "type": "integer" },
+
+    "Primary": { "type": "integer" },
+    "Secondary": { "type": "integer" },
+    "Levels": { "type": "integer" }
+  },
+
+  "additionalProperties": true
+}

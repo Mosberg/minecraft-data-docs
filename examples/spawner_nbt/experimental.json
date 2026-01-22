@@ -1,0 +1,13 @@
+{
+  "Delay": 42,
+  "MaxNearbyEntities": 42,
+  "MaxSpawnDelay": 42,
+  "MinSpawnDelay": 42,
+  "RequiredPlayerRange": 42,
+  "SpawnCount": 42,
+  "SpawnData": {},
+  "SpawnPotentials": [
+    {}
+  ],
+  "SpawnRange": 42
+}

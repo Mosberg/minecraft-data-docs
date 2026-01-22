@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/item_model.schema.json",
+  "title": "Minecraft Item Model",
+  "type": "object",
+
+  "additionalProperties": true,
+
+  "properties": {
+    "parent": {
+      "type": "string"
+    },
+
+    "textures": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+
+    "gui_light": {
+      "type": "string",
+      "enum": ["front", "side"]
+    },
+
+    "elements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+
+        "properties": {
+          "from": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "minimum": -16,
+              "maximum": 32
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+
+          "to": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "minimum": -16,
+              "maximum": 32
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+
+          "rotation": {
+            "type": "object",
+            "additionalProperties": false,
+
+            "properties": {
+              "origin": {
+                "type": "array",
+                "items": { "type": "number" },
+                "minItems": 3,
+                "maxItems": 3
+              },
+
+              "axis": {
+                "type": "string",
+                "enum": ["x", "y", "z"]
+              },
+
+              "angle": {
+                "type": "number",
+                "minimum": -45,
+                "maximum": 45
+              },
+
+              "rescale": {
+                "type": "boolean"
+              }
+            }
+          },
+
+          "shade": {
+            "type": "boolean"
+          },
+
+          "light_emission": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 15
+          },
+
+          "faces": {
+            "type": "object",
+            "additionalProperties": false,
+
+            "properties": {
+              "down": { "$ref": "#/$defs/face" },
+              "up": { "$ref": "#/$defs/face" },
+              "north": { "$ref": "#/$defs/face" },
+              "south": { "$ref": "#/$defs/face" },
+              "west": { "$ref": "#/$defs/face" },
+              "east": { "$ref": "#/$defs/face" }
+            }
+          }
+        }
+      }
+    },
+
+    "display": {
+      "type": "object",
+      "additionalProperties": false,
+
+      "properties": {
+        "thirdperson_righthand": { "$ref": "#/$defs/display_transform" },
+        "thirdperson_lefthand": { "$ref": "#/$defs/display_transform" },
+        "firstperson_righthand": { "$ref": "#/$defs/display_transform" },
+        "firstperson_lefthand": { "$ref": "#/$defs/display_transform" },
+        "gui": { "$ref": "#/$defs/display_transform" },
+        "head": { "$ref": "#/$defs/display_transform" },
+        "ground": { "$ref": "#/$defs/display_transform" },
+        "fixed": { "$ref": "#/$defs/display_transform" },
+        "on_shelf": { "$ref": "#/$defs/display_transform" }
+      }
+    },
+
+    "name": {
+      "type": "string"
+    },
+
+    "texture_size": {
+      "type": "array",
+      "items": { "type": "integer" },
+      "minItems": 2,
+      "maxItems": 2
+    }
+  },
+
+  "$defs": {
+    "face": {
+      "type": "object",
+      "additionalProperties": false,
+
+      "properties": {
+        "uv": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 4,
+          "maxItems": 4
+        },
+
+        "texture": {
+          "type": "string"
+        },
+
+        "cullface": {
+          "type": "string",
+          "enum": ["down", "up", "north", "south", "west", "east"]
+        },
+
+        "rotation": {
+          "type": "integer",
+          "enum": [0, 90, 180, 270]
+        },
+
+        "tintindex": {
+          "type": "integer"
+        }
+      }
+    },
+
+    "display_transform": {
+      "type": "object",
+      "additionalProperties": false,
+
+      "properties": {
+        "rotation": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 3,
+          "maxItems": 3
+        },
+
+        "translation": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": -80,
+            "maximum": 80
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+
+        "scale": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "maximum": 4
+          },
+          "minItems": 3,
+          "maxItems": 3
+        }
+      }
+    }
+  }
+}

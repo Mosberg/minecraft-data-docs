@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/block_states.schema.json",
+  "title": "Minecraft Blockstate File",
+  "type": "object",
+
+  "properties": {
+    "variants": {
+      "type": "object",
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "model": { "type": "string" },
+              "x": { "type": "number" },
+              "y": { "type": "number" },
+              "z": { "type": "number" },
+              "uvlock": { "type": "boolean" },
+              "weight": { "type": "integer" }
+            }
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "model": { "type": "string" },
+                "x": { "type": "number" },
+                "y": { "type": "number" },
+                "z": { "type": "number" },
+                "uvlock": { "type": "boolean" },
+                "weight": { "type": "integer" }
+              }
+            }
+          }
+        ]
+      }
+    },
+
+    "multipart": {
+      "type": "array",
+      "items": {
+        "type": "object",
+
+        "properties": {
+          "when": {
+            "type": "object",
+            "additionalProperties": true
+          },
+
+          "apply": {
+            "type": "object",
+            "properties": {
+              "model": { "type": "string" },
+              "x": { "type": "number" },
+              "y": { "type": "number" },
+              "z": { "type": "number" },
+              "uvlock": { "type": "boolean" },
+              "weight": { "type": "integer" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

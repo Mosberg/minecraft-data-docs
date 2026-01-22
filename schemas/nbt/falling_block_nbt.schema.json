@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/falling_block_nbt.schema.json",
+  "title": "Falling Block NBT",
+  "type": "object",
+
+  "properties": {
+    "BlockState": {
+      "type": "object",
+      "properties": {
+        "Name": { "type": "string" },
+        "Properties": { "type": "object" }
+      },
+      "additionalProperties": true
+    },
+
+    "Time": { "type": "integer" },
+    "DropItem": { "type": "integer" },
+
+    "TileEntityData": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+
+  "additionalProperties": true
+}

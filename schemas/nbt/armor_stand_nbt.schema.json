@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/armor_stand_nbt.schema.json",
+  "title": "Armor Stand NBT",
+  "type": "object",
+
+  "properties": {
+    "NoGravity": { "type": "integer" },
+    "ShowArms": { "type": "integer" },
+    "NoBasePlate": { "type": "integer" },
+    "Small": { "type": "integer" },
+    "Marker": { "type": "integer" },
+    "Invisible": { "type": "integer" },
+
+    "Rotation": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2
+    },
+
+    "Pose": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "number" },
+        "minItems": 3,
+        "maxItems": 3
+      }
+    }
+  },
+
+  "additionalProperties": true
+}

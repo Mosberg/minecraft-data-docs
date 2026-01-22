@@ -1,0 +1,9 @@
+{
+  "BlockState": {
+    "Name": "example",
+    "Properties": {}
+  },
+  "DropItem": 42,
+  "TileEntityData": {},
+  "Time": 42
+}

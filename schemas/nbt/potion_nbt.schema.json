@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/potion_nbt.schema.json",
+  "title": "Potion NBT",
+  "type": "object",
+
+  "properties": {
+    "Potion": { "type": "string" },
+
+    "CustomPotionEffects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Id": { "type": "integer" },
+          "Amplifier": { "type": "integer" },
+          "Duration": { "type": "integer" }
+        },
+        "additionalProperties": true
+      }
+    },
+
+    "CustomPotionColor": { "type": "integer" }
+  },
+
+  "additionalProperties": true
+}

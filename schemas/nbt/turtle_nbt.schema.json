@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/turtle_nbt.schema.json",
+  "title": "Turtle NBT",
+  "type": "object",
+
+  "properties": {
+    "HomePosX": { "type": "integer" },
+    "HomePosY": { "type": "integer" },
+    "HomePosZ": { "type": "integer" },
+
+    "TravelPosX": { "type": "integer" },
+    "TravelPosY": { "type": "integer" },
+    "TravelPosZ": { "type": "integer" },
+
+    "HasEgg": { "type": "integer" }
+  },
+
+  "additionalProperties": true
+}

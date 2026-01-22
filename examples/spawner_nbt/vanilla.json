@@ -1,0 +1,13 @@
+{
+  "Delay": 1,
+  "MaxNearbyEntities": 1,
+  "MaxSpawnDelay": 1,
+  "MinSpawnDelay": 1,
+  "RequiredPlayerRange": 1,
+  "SpawnCount": 1,
+  "SpawnData": {},
+  "SpawnPotentials": [
+    {}
+  ],
+  "SpawnRange": 1
+}

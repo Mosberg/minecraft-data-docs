@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/item_frame_nbt.schema.json",
+  "title": "Item Frame NBT",
+  "type": "object",
+
+  "properties": {
+    "Facing": { "type": "integer" },
+    "ItemRotation": { "type": "integer" },
+
+    "Item": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "Count": { "type": "integer" },
+        "tag": { "type": "object" }
+      },
+      "additionalProperties": true
+    },
+
+    "Invisible": { "type": "integer" },
+    "Fixed": { "type": "integer" }
+  },
+
+  "additionalProperties": true
+}

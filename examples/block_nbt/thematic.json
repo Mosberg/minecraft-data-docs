@@ -1,0 +1,9 @@
+{
+  "Command": "example",
+  "CustomName": "example",
+  "Levels": 1,
+  "Lock": "example",
+  "Primary": 1,
+  "Secondary": 1,
+  "auto": 1
+}

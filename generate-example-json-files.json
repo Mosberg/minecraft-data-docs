@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "description": "Specification for generating example JSON files from schemas and documentation.",
+  "input": {
+    "schema_root": "minecraft-data-docs/schemas/",
+    "docs_root": "minecraft-data-docs/docs/",
+    "validation_settings": "minecraft-data-docs/.vscode/settings.json"
+  },
+  "rules": {
+    "authority": {
+      "schemas_are_source_of_truth": true,
+      "docs_are_reference_only": true
+    },
+    "generation": {
+      "examples_per_schema": "comprehensive",
+      "example_types": [
+        "minimal",
+        "typical",
+        "full",
+        "maximal",
+        "thematic",
+        "performance",
+        "experimental",
+        "vanilla",
+        "modded",
+        "edge_cases"
+      ],
+      "field_ordering": "canonical",
+      "naming_convention": "kebab-case",
+      "deterministic_output": true,
+      "allow_additional_properties": false
+    },
+    "validation": {
+      "strict_schema_validation": true,
+      "use_vscode_settings": true,
+      "reject_invalid_examples": true
+    }
+  },
+  "output": {
+    "root": "minecraft-data-docs/examples/",
+    "structure": "minecraft-data-docs/examples/<schema-name>/<example-name>.json",
+    "overwrite_existing": true,
+    "pretty_print": true,
+    "newline_at_end_of_file": true
+  },
+  "ci_requirements": {
+    "fail_on_missing_examples": true,
+    "fail_on_invalid_examples": true,
+    "fail_on_unexpected_files": true
+  }
+}

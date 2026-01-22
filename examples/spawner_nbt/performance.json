@@ -1,0 +1,22 @@
+{
+  "Delay": 9999999,
+  "MaxNearbyEntities": 9999999,
+  "MaxSpawnDelay": 9999999,
+  "MinSpawnDelay": 9999999,
+  "RequiredPlayerRange": 9999999,
+  "SpawnCount": 9999999,
+  "SpawnData": {},
+  "SpawnPotentials": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "SpawnRange": 9999999
+}

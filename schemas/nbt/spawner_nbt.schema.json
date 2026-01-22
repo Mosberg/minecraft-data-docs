@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/refs/heads/main/projects/minecraft-data-docs/schemas/nbt/spawner_nbt.schema.json",
+  "title": "Spawner NBT",
+  "type": "object",
+
+  "properties": {
+    "SpawnData": {
+      "type": "object",
+      "additionalProperties": true
+    },
+
+    "SpawnCount": { "type": "integer" },
+    "SpawnRange": { "type": "integer" },
+    "RequiredPlayerRange": { "type": "integer" },
+    "Delay": { "type": "integer" },
+    "MinSpawnDelay": { "type": "integer" },
+    "MaxSpawnDelay": { "type": "integer" },
+    "MaxNearbyEntities": { "type": "integer" },
+
+    "SpawnPotentials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "data": { "type": "object" },
+          "weight": { "type": "integer" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+
+  "additionalProperties": true
+}

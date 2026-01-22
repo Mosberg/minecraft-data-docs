@@ -1,0 +1,11 @@
+{
+  "Facing": 1,
+  "Fixed": 1,
+  "Invisible": 1,
+  "Item": {
+    "Count": 1,
+    "id": "example",
+    "tag": {}
+  },
+  "ItemRotation": 1
+}
